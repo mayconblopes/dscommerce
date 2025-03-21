@@ -25,7 +25,7 @@ class DscommerceApplicationTests {
         assertEquals("Mike the Mike", mike.getName());
         assertEquals("mike@gmail.com", mike.getEmail());
         assertEquals("+5599999999", mike.getPhone());
-        assertEquals(LocalDate.of(2000, 5, 25), mike.getBirhDate());
+        assertEquals(LocalDate.of(2000, 5, 25), mike.getBirthDate());
         assertEquals("123456", mike.getPassword());
     }
 
