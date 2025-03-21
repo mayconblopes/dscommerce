@@ -1,23 +1,30 @@
 package com.mike.dscommerce.entities;
 
+import jakarta.persistence.*;
+
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "tb_user")
 public class User {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String email;
     private String phone;
-    private LocalDate birgDate;
+    private LocalDate birhDate;
     private String password;
 
     public User(){}
 
-    public User(Long id, String name, String email, String phone, LocalDate birgDate, String password) {
+    public User(Long id, String name, String email, String phone, LocalDate birhDate, String password) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.phone = phone;
-        this.birgDate = birgDate;
+        this.birhDate = birhDate;
         this.password = password;
     }
 
@@ -53,12 +60,12 @@ public class User {
         this.phone = phone;
     }
 
-    public LocalDate getBirgDate() {
-        return birgDate;
+    public LocalDate getBirhDate() {
+        return birhDate;
     }
 
-    public void setBirgDate(LocalDate birgDate) {
-        this.birgDate = birgDate;
+    public void setBirhDate(LocalDate birhDate) {
+        this.birhDate = birhDate;
     }
 
     public String getPassword() {
